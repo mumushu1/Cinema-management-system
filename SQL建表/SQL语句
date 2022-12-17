@@ -1,1 +1,77 @@
+create table 会员表
+(
+    会员名   varchar(20) not null,
+    会员电话 varchar(30) not null,
+    会员编号 int auto_increment
+        primary key
+);
+
+create table 影厅表
+(
+    影厅号     varchar(10) not null
+        primary key,
+    座位数     int         not null,
+    影厅类型   varchar(20) not null,
+    影厅状态   varchar(20) not null,
+    管理员编号 int         not null
+);
+
+create table 电影表
+(
+    电影编号   int auto_increment
+        primary key,
+    电影名称   varchar(20) not null,
+    电影类型   varchar(20) null,
+    时长       varchar(20) not null,
+    票价       varchar(20) not null,
+    影厅号     varchar(20) null,
+    放映时间   datetime    not null,
+    管理员编号 int         null
+);
+
+create table 管理员表
+(
+    管理员编号 int auto_increment
+        primary key,
+    管理员名   varchar(20) not null,
+    管理员密码 varchar(20) not null
+);
+
+create table 顾客表
+(
+    顾客编号 int auto_increment
+        primary key,
+    顾客名   varchar(20) not null,
+    顾客密码 varchar(20) not null,
+    会员编号 int         null,
+    constraint 顾客表_顾客名_uindex
+        unique (顾客名),
+    constraint 会员编号
+        foreign key (会员编号) references 会员表 (会员编号)
+);
+
+create table 查看购买
+(
+    顾客编号 int not null,
+    电影编号 int not null,
+    primary key (顾客编号, 电影编号),
+    constraint 外键_name1
+        foreign key (顾客编号) references 顾客表 (顾客编号),
+    constraint 外键_name2
+        foreign key (电影编号) references 电影表 (电影编号)
+);
+
+create table 票务表
+(
+    票务编号 int auto_increment
+        primary key,
+    电影名称 varchar(20) not null,
+    放映时间 datetime    not null,
+    影厅号   varchar(10) not null,
+    票价     varchar(10) not null,
+    顾客编号 int         not null,
+    constraint 外键_name
+        foreign key (顾客编号) references 顾客表 (顾客编号)
+);
+
 

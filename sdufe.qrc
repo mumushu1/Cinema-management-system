@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>山财大招牌.png</file>
+        <file>山财大招牌1.png</file>
+        <file>山财大校徽.png</file>
+        <file>icon.ico</file>
+    </qresource>
+</RCC>

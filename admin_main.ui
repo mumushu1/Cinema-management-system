@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>admin_main</class>
+ <widget class="QWidget" name="admin_main">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>839</width>
+    <height>505</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>华康方圆体W7</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>管理员主界面</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="sdufe.qrc">
+    <normaloff>:/山财大校徽.png</normaloff>:/山财大校徽.png</iconset>
+  </property>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>80</y>
+     <width>271</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>电影信息管理</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>300</y>
+     <width>271</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>影厅信息管理</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>440</y>
+     <width>93</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>退出登录</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="sdufe.qrc"/>
+ </resources>
+ <connections/>
+</ui>

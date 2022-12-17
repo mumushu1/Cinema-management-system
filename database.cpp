@@ -14,7 +14,7 @@ bool Database::getConnection()
     db.setPort(3306);                                   // 绑定数据库端口号
     db.setDatabaseName("cinema");                        // 绑定ODBC数据源名称
     db.setUserName("root");                             // 绑定数据库系统用户名
-    db.setPassword("05724126ch");                       // 输入数据库系统登录密码
+    db.setPassword("123456");                       // 输入数据库系统登录密码
     if(!db.open ())
     {
         qDebug()<<"DataBase Error";
